@@ -1,0 +1,17 @@
+//
+//  CodingChallange.pch
+//  CodingChallange
+//
+//  Created by Pro on 04/03/2016.
+//  Copyright © 2016 Pro. All rights reserved.
+//
+
+#ifndef CodingChallange_pch
+#define CodingChallange_pch
+
+#import "Constants.h"
+#import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+#import "SharedData.h"
+
+#endif /* CodingChallange_pch */
