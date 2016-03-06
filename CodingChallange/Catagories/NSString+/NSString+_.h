@@ -20,10 +20,6 @@
 
 
 - (NSData *)base64DataFromString;
-+ (NSString *)getRandomString:(NSInteger)len;
-
-//+(CGFloat)heightOfTextForString:(NSString *)text andLable:(UILabel *)myLabel;
-//+(CGFloat)heightOfTextForString:(NSString *)text size:(CGSize)size font:(UIFont *)font;
 
 - (NSString *)getLastCharacter;
 - (NSString *)removeLastCharacter;

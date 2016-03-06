@@ -26,7 +26,6 @@
     
     self.menuDataSource = @[@"View Latest Tweets",@"Saved Tweets"];
     [[SharedData sharedInstance]loginTwiiterUser];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {

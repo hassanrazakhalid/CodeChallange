@@ -13,8 +13,6 @@
 {
 
 }
-
-//@property (nonatomic, weak)IBOutlet UISearchContainerViewController *searchController;
 @property (nonatomic, retain)UISearchController *searchController;
 
 @end

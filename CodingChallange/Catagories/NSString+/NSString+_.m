@@ -35,7 +35,7 @@ static char *alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012
 
 - (NSString *)urlDecode{
 
-    NSString *decoded = [self stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *decoded = [self stringByRemovingPercentEncoding];
     return decoded;
 }
 
@@ -78,20 +78,6 @@ static char *alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012
     
     return result;
 }
-
-+ (NSString *)getRandomString:(NSInteger)len{
-
-    NSMutableString *mString = [NSMutableString string];
-    
-    for (NSInteger i = 0; i < len; i++) {
-
-        NSInteger r = arc4random_uniform(6);
-        [mString appendFormat:[NSString stringWithFormat:@"%li",(long)r]];
-
-    }
-    return mString;
-}
-
 
 - (BOOL)myContainsString:(NSString*)other {
     NSRange range = [self rangeOfString:other];
