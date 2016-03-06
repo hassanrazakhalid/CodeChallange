@@ -63,20 +63,12 @@ static SharedData *instance = nil;
 - (void) getTweetsInfo:(NSString *)text callback:(FetchTweets)callback
 {
 
-//    https://api.twitter.com/1.1/search/tweets.json?q=%23freebandnames&since_id=24012619984051000&max_id=250126199840518145&result_type=mixed&count=4
-    
-//    'https://api.twitter.com/1.1/statuses/user_timeline.json
-    NSString *urlString = [NSString stringWithFormat:@"https://api.twitter.com/1.1/search/tweets.json"];
-    
-//    NSDictionary *parameters = @{
-//                                 @"screen_name":self.currentUser.twitterAccount.username,
-//                                 @"count":@"20"
-//                                 };
+    NSString *urlString = [NSString stringWithFormat:@"https://api.twitter.com/1.1/search/tweets.json"];    
     NSString * encodedText = [[NSString stringWithFormat:@"%@",text] urlencode];
 
+    // count is currently hard coded but can also be passed through function
     NSDictionary *parameters = @{@"result_type":@"mixed",
                                                @"q":encodedText,
-//                                                 @"since_id":@"705827662510555131",
                                                  @"count":@"4"};
     
     SLRequest *twitterInfoRequest = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodGET URL:[NSURL URLWithString:urlString] parameters:parameters];
